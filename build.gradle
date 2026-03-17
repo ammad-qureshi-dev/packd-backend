@@ -1,0 +1,82 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '4.0.3'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.packd'
+version = '0.0.1-SNAPSHOT'
+description = 'Backend Server API for packd'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter-kafka'
+//	implementation 'org.springframework.boot:spring-boot-starter-liquibase'
+//	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-liquibase-test'
+
+	// ================= DEVELOPMENT TOOLS =================
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// ================= DATABASE =================
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	runtimeOnly 'org.postgresql:postgresql'
+
+	// ================= MESSAGING =================
+//	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+
+	// ================= WEB =================
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+
+	// ================= SECURITY =================
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+
+	// ================= TEMPLATE =================
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+
+	// ================= VAULT =================
+//	implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
+
+
+	// ================= TESTING =================
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// ================= API Docs =================
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.10'
+
+	// ================= JWT =================
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
