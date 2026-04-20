@@ -1,12 +1,10 @@
 package com.packd.server_api.controllers;
 
+import com.packd.dtos.response.ApiResponse;
 import com.packd.server_api.controllers.dto.request.TripRequest;
 import com.packd.server_api.controllers.dto.request.UpdateTripRequest;
-import com.packd.server_api.controllers.dto.response.ApiResponse;
 import com.packd.server_api.controllers.dto.response.CreateTripResponse;
 import com.packd.server_api.controllers.dto.response.TripDto;
-import com.packd.server_api.models.BaseEntity;
-import com.packd.server_api.models.Trip;
 import com.packd.server_api.services.TripService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

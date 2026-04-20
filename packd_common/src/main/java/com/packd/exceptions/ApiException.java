@@ -1,7 +1,9 @@
 /* (C) 2026
 Cash Money App */
-package com.packd.server_api.exceptions;
+package com.packd.exceptions;
 
+import com.packd.dtos.enums.ExceptionCode;
+import com.packd.dtos.enums.ExceptionType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

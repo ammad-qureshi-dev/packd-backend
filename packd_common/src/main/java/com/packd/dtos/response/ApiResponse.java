@@ -1,4 +1,4 @@
-package com.packd.server_api.controllers.dto.response;
+package com.packd.dtos.response;
 import java.time.Instant;
 import java.util.UUID;
 

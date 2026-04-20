@@ -1,14 +1,11 @@
 package com.packd.server_api.services;
 
+import com.packd.dtos.enums.ExceptionCode;
+import com.packd.exceptions.ApiException;
 import com.packd.server_api.controllers.dto.request.TripRequest;
 import com.packd.server_api.controllers.dto.request.UpdateTripRequest;
 import com.packd.server_api.controllers.dto.response.CreateTripResponse;
-import com.packd.server_api.controllers.dto.response.DestinationDto;
 import com.packd.server_api.controllers.dto.response.TripDto;
-import com.packd.server_api.exceptions.ApiException;
-import com.packd.server_api.exceptions.ExceptionCode;
-import com.packd.server_api.mappers.ActivityMapper;
-import com.packd.server_api.mappers.DestinationMapper;
 import com.packd.server_api.mappers.TripMapper;
 import com.packd.server_api.models.Trip;
 import com.packd.server_api.repositories.TripRepository;
@@ -17,7 +14,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.UUID;
 
 @Service

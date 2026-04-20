@@ -1,1 +1,3 @@
 rootProject.name = 'server_api'
+
+include 'packd_common'

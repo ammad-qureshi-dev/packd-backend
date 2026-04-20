@@ -1,4 +1,4 @@
-package com.packd.server_api.exceptions;
+package com.packd.dtos.enums;
 
 public enum ExceptionCode {
     TRIP_ALREADY_EXISTS, APP_USER_NOT_FOUND, INVALID_CREDENTIALS, TRIP_DOES_NOT_EXIST, DESTINATION_DOES_NOT_EXIST, ACTIVITY_NOT_FOUND, VALIDATION_FAILED

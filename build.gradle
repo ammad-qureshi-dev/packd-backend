@@ -31,6 +31,8 @@ dependencies {
 //	testImplementation 'org.springframework.boot:spring-boot-starter-kafka-test'
 //	testImplementation 'org.springframework.boot:spring-boot-starter-liquibase-test'
 
+	implementation project(':packd_common')
+
 	// ================= DEVELOPMENT TOOLS =================
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	compileOnly 'org.projectlombok:lombok'

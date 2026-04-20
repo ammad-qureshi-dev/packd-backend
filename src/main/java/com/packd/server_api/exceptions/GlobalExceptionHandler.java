@@ -1,19 +1,18 @@
 package com.packd.server_api.exceptions;
 
 
-import com.packd.server_api.controllers.dto.response.ApiErrorResponse;
+import com.packd.dtos.enums.ExceptionCode;
+import com.packd.dtos.enums.ExceptionType;
+import com.packd.dtos.response.ApiErrorResponse;
+import com.packd.exceptions.ApiException;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

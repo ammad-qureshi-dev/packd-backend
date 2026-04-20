@@ -1,4 +1,4 @@
-package com.packd.server_api.exceptions;
+package com.packd.dtos.enums;
 
 public enum ExceptionType {
     WARNING,

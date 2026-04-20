@@ -1,8 +1,8 @@
 package com.packd.server_api.services;
 
+import com.packd.dtos.enums.ExceptionCode;
+import com.packd.exceptions.ApiException;
 import com.packd.server_api.controllers.dto.request.ActivityRequest;
-import com.packd.server_api.exceptions.ApiException;
-import com.packd.server_api.exceptions.ExceptionCode;
 import com.packd.server_api.mappers.ActivityMapper;
 import com.packd.server_api.models.Activity;
 import com.packd.server_api.models.Destination;
@@ -12,11 +12,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalTime;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

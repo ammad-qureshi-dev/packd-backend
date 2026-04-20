@@ -1,7 +1,7 @@
-package com.packd.server_api.controllers.dto.response;
+package com.packd.dtos.response;
 
-import com.packd.server_api.exceptions.ExceptionCode;
-import com.packd.server_api.exceptions.ExceptionType;
+import com.packd.dtos.enums.ExceptionCode;
+import com.packd.dtos.enums.ExceptionType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
